@@ -7,7 +7,7 @@ if (process.argv.length <3) {
 
 const password = process.argv[2]
 
-const url = `TARKISTA TÄMÄ`
+const url = `mongodb+srv://binwufi:${password}@cluster0.hwvcrac.mongodb.net/blogInfo?retryWrites=true&w=majority`
 
 mongoose.set('strictQuery', false)
 mongoose.connect(url)
@@ -26,6 +26,12 @@ const blog = new Blog({
     author: 'Olavi Virtanen',
     url: 'www.hs.fi',
     likes: 15
+})
+
+//kokeilu 6.1.2024
+blog.save().the(result => {
+    console.log("blog saved!")
+    mongoose.connection.close()
 })
 
 Blog.find({}).then(result => {
