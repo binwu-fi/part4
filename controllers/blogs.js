@@ -1,6 +1,17 @@
 const blogsRouter = require('express').Router()
 const Blog = require('../models/blog')
 
+//getter that gives whole bloglsit
+blogsRouter.get('/api/blogs', (request, response) => {
+    Blog.find({}).then(blog => {
+        response.json(blog)
+    })
+})
+
+blogsRouter.get('/', (request, response) => {
+    response.send('<h1>Hello Bin!</h1>')
+})
+
 blogsRouter.get('/:id', (request, response, next) => {
   Blog
     .findById(request.params.id)
