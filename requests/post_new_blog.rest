@@ -1,0 +1,6 @@
+POST http://localhost:3001/api/blogs 
+Content-Type: application/json
+
+{
+    "title": "Raspberry Pi blog", "author": "Vesa Visa", "url": "www.raspiblog.fi", "likes": 50
+}
