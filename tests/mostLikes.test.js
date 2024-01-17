@@ -1,7 +1,7 @@
-//exercise 4.4 start
+//exercise 4.7 start
 const listHelper = require('../utils/list_helper')
 
-describe('total like', () => {
+describe('favorite blog', () => {
   const listWithOneBlog = [
     {
       _id: "5a422a851b54a676234d17f7",
@@ -50,12 +50,12 @@ describe('total like', () => {
       url: "http://blog.cleancoder.com/uncle-bob/2016/05/01/TypeWars.html",
       likes: 2,
       __v: 0
-    }  
+    }
   ]
-
-  test ('when list has only one blog equals the likes of that', () => {
-    const result = listHelper.totalLikes(listWithOneBlog)
-    expect(result).toBe(36)
+  test ('most likes blog', () => {
+    const result = listHelper.mostLikes(listWithOneBlog)
+    //expect(result).toEqual({ author: 'Robert C. Martin', blogs: 3 })
+    expect(result).toEqual({ author: 'Edsger W. Dijkstra' , likes: 17 })
   })
 })
-//exercise 4.4 end 
+//exercise 4.7 end
