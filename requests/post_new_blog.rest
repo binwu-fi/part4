@@ -2,5 +2,9 @@ POST http://localhost:3001/api/blogs
 Content-Type: application/json
 
 {
-    "title": "Raspberry Pi blog", "author": "Vesa Visa", "url": "www.raspiblog.fi", "likes": 50
+    "title": "veneiden teko", 
+    "author": "Alibaba Suuri", 
+    "url": "www.vene.com",
+    "likes": 5,
+    "userId": "65cbb9dab0dfa23ce686591e"
 }

@@ -12,10 +12,14 @@
   "author": "Bin Wu",
   "license": "ISC",
   "dependencies": {
+    "ajv": "^8.12.0",
+    "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "mongoose": "^7.6.5"
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^6.12.2",
+    "mongoose-unique-validator": "^5.0.0"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
@@ -25,6 +29,7 @@
     "supertest": "^6.3.4"
   },
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "globalTeardown": "./tests/teardown.js"
   }
 }

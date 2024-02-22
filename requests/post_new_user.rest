@@ -1,0 +1,9 @@
+POST http://localhost:3001/api/users 
+Content-Type: application/json
+
+{
+    "username": "Aatos Paasikivi3",
+    "name": "Aapaa2",
+    "password": "admin2",
+    "blogId": "659c314e430f4b529dc6f550"
+}
